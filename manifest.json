@@ -36,8 +36,7 @@
     "gecko": {
       "id": "tabpower@example.com",
       "data_collection_permissions": {
-        "collects_sensitive_data": false,
-        "collects_data": false
+        "required": ["none"]
       }
     }
   },
