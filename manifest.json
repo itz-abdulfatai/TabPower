@@ -34,7 +34,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "tabpower@example.com",
+      "id": "tabpower@abduldev.com",
       "data_collection_permissions": {
         "required": ["none"]
       }
