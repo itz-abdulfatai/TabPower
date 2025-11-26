@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "TabPower",
+  "version": "1.2",
+  "description": "Toggle internet per tab with a big power button, keyboard shortcut, badge, sounds and whitelist",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "TabPower",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/tabpower_16.png",
+    "32": "icons/tabpower_32.png",
+    "48": "icons/tabpower_48.png",
+    "128": "icons/tabpower_128.png",
+    "256": "icons/tabpower_256.png",
+    "512": "icons/tabpower_512.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tabpower@example.com",
+      "data_collection_permissions": {
+        "collects_sensitive_data": false,
+        "collects_data": false
+      }
+    }
+  },
+
+  "commands": {
+    "toggle-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Toggle internet for the current tab"
+    }
+  }
+}

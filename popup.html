@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TabPower</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header id="header">
+        <div id="iconWrap" aria-hidden="true">
+          <!-- small icon so name fits nicely -->
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M13 3h-2v10h2V3z" />
+            <path
+              d="M12 22c5.523 0 10-4.477 10-10 0-2.76-1.118-5.267-2.927-7.071l-1.414 1.414C20.085 8.086 21 9.99 21 12c0 4.971-4.029 9-9 9s-9-4.029-9-9c0-2.01.915-3.914 2.34-5.657L4 4.929C2.118 6.811 1 9.305 1 12 1 17.523 5.477 22 11 22h1z"
+            />
+          </svg>
+        </div>
+        <div id="title">TabPower</div>
+      </header>
+
+      <main id="container">
+        <button id="power" aria-label="toggle internet">
+          <svg
+            id="icon"
+            viewBox="0 0 24 24"
+            width="84"
+            height="84"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M13 3h-2v10h2V3z" />
+            <path
+              d="M12 22c5.523 0 10-4.477 10-10 0-2.76-1.118-5.267-2.927-7.071l-1.414 1.414C20.085 8.086 21 9.99 21 12c0 4.971-4.029 9-9 9s-9-4.029-9-9c0-2.01.915-3.914 2.34-5.657L4 4.929C2.118 6.811 1 9.305 1 12 1 17.523 5.477 22 11 22h1z"
+            />
+          </svg>
+        </button>
+
+        <div id="label">Loading</div>
+
+        <label id="whitelistRow">
+          <input type="checkbox" id="whitelistCheckbox" />
+          Exclude this site (always allow)
+        </label>
+
+        <div id="hint">Shortcut: Ctrl Shift Y or Command Shift Y</div>
+      </main>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
